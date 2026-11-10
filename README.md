@@ -2,7 +2,7 @@
 
 Online appointment booking for small businesses. Any business can sign up and get its own public booking page. Customers pick a service, a staff member (or "anyone") and a free time, and get a confirmation email with a private link to reschedule or cancel. Owners run everything from an admin dashboard: services, staff and weekly hours, time off and holidays, bookings, and stats.
 
-**Live demo:** _coming soon_ · try the demo shop at `/b/demo`, or open the read-only demo dashboard from the home page.
+**Live demo:** https://slotbook-n97p.onrender.com. Book at the [demo shop](https://slotbook-n97p.onrender.com/b/demo), or open the read-only demo dashboard from the home page. It runs on Render's free tier, so the first load after it's been idle can take about a minute.
 
 ![Admin dashboard](docs/dashboard.png)
 
