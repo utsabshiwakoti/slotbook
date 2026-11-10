@@ -20,7 +20,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/app ./app
 COPY --from=frontend /frontend/dist ./static
 
-RUN useradd --create-home appuser
+# Run as a normal user. It owns /app only so the SQLite fallback can create its file there.
+RUN useradd --create-home appuser && chown appuser /app
 USER appuser
 
 EXPOSE 8000
