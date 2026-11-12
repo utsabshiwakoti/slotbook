@@ -63,6 +63,8 @@ Intervals are half-open (`[start, end)`), so back-to-back bookings are allowed.
 
 ### Never double-booking
 
+Longer write-up: [How SlotBook makes double-booking impossible](docs/no-double-booking.md).
+
 Listing slots and claiming one go through the same function, so the API can't accept a time it wouldn't have offered. Claiming happens in three layers:
 
 1. **Re-check under a lock.** The staff member's row is locked with `SELECT ... FOR UPDATE`, then availability is checked again. Two requests racing for the same slot are serialised, and the second one gets a friendly "no longer available" error.
